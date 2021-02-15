@@ -1,0 +1,12 @@
+{
+    "name": "gembel/tugas-akhir",
+    "description": "bantuin tugas akhir",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gembelinternet",
+            "email": "gembelinternet404@gmail.com"
+        }
+    ],
+    "require": {}
+}
