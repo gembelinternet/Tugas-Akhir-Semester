@@ -120,6 +120,22 @@ jQuery(document).ready(function($) {
 				processData: false,
 				cache : false,
 				success: function(data) {
+					var nilai_huruf = '';
+
+					if (data.total > 80) {
+						nilai_huruf = 'A';
+					} else if (data.total < 50) {
+						nilai_huruf = 'E';
+					} else if (data.total <= 80) {
+						nilai_huruf = 'B';
+					} else if (data.total < 70) {
+						nilai_huruf = 'C';
+					} else if (data.total < 60) {
+						nilai_huruf = 'D';
+					}
+
+					$('input[name="nilai_akhir"]').val(data.total);
+					$('input[name="nilai_huruf"]').val(nilai_huruf);
 					Swal.fire({
 						html: "Nama Mahasiswa : "+data.nama_mahasiswa+"<br> Total Nilai : "+data.total+"<br>"
 					});
